@@ -1,5 +1,6 @@
 package br.com.caelum.ingresso.model;
 
+
 import java.time.LocalTime;
 
 import javax.persistence.Entity;
@@ -7,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
-import org.hibernate.Hibernate;
 
 @Entity
 public class Sessao {
