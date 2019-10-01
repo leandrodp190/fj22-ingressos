@@ -18,7 +18,7 @@ public class GerenciadorDeSessao {
 		if(terminaAmanha(sessaoNova)) {
 			return false;
 		}
-		return true;
+		return sessoesDaSala.stream().noneMatch(sessaoExistente -> horarioIsConflitante(sessaoExistente, sessaoNova));
 	}
 
 	private boolean terminaAmanha(Sessao sessao) {
