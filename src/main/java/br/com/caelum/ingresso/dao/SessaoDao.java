@@ -29,4 +29,12 @@ public class SessaoDao {
 		return manager.createQuery("select s from Sessao s where s.filme = :filme", Sessao.class)
 				.setParameter("filme", filme).getResultList();
 	}
+	
+    public List<Sessao> findAll() {
+        return manager.createQuery("select s from Sessao s", Sessao.class).getResultList();
+    }
+    
+    public Sessao findOne(Integer id) {
+    	return manager.find(Sessao.class, id);
+    }
 }
